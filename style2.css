@@ -1,0 +1,42 @@
+#container{
+    margin-top: 70px;
+    margin-left: 100px;
+}
+
+.radio{
+    margin-top: 50px;
+}
+
+input[type='radio']{
+    margin: 0;
+}
+
+/* using ::after Pseudo-element to hide the browser's default radio button and create new style */
+input[type='radio']:after {
+        width: 50px;
+        height: 50px;
+        position: relative;
+        top: -20px;
+        left: -20px;
+        background-color: #BDBDBD;
+        content: '';
+        display: block;
+        visibility: visible;
+        border: 2px solid #FFFFFF;
+        border-radius: 10px;
+}
+
+input[type='radio']:checked:after {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: -20px;
+    left: -20px;
+    content: '';
+    display: block;
+    visibility: visible;
+    border: 2px solid #FFFFFF;
+    border-radius: 10px;
+    transition: background-color 3s ease-out; /* changing color with transition property over 3 second with ease-out timing function */ 
+    background-color: #FF0000;
+}
